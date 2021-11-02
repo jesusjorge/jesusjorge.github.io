@@ -19,7 +19,15 @@ ___
 <br/>
 **Q: Is this official?**<br/>
 **A:** no<br/>
+<br/>
+**Q: Is there a name?**<br/>
+**A:** no<br/>
 
 ___
 Contact: huh@jesusjorge.com<br/>
 Twitter: [HuhFrum](https://twitter.com/HuhFrum)
+___
+Further reading<br/>
+[Numeronym](https://en.wikipedia.org/wiki/Numeronym)
+
+

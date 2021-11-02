@@ -8,5 +8,5 @@ Stuff published here is open for discussion
 
 | Link | Description |
 | ------ | ------ |
-| [s13n](https://github.com/jesusjorge/s13n/wiki) | Draft Standardization Wiki |
+| [s13n](https://github.com/jesusjorge/s13n/wiki) | Draft s13n Wiki |
 

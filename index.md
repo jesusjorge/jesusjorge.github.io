@@ -20,9 +20,6 @@ ___
 **Q: Is this official?**<br/>
 **A:** no<br/>
 <br/>
-**Q: Is there a name?**<br/>
-**A:** no<br/>
-
 ___
 
 Contact: huh@jesusjorge.com<br/>

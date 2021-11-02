@@ -1,6 +1,6 @@
 # jesusjorge.github.io
 
-Draft documentation and links that I like to keep handy
+Welcome to my personal draft pages
 
 ### Index
 

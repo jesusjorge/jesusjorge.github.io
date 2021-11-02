@@ -2,7 +2,7 @@
 
 Welcome to my drafts
 
-Stuff published here is open for discussion
+Posts in here are open for discussion
 
 ### Index
 

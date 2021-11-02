@@ -16,5 +16,5 @@ ___
 **Q: What does [s13n](https://www.acronymfinder.com/Standardization-(S13N).html) means?**<br/>
 **A:** see [s13n](https://www.acronymfinder.com/Standardization-(S13N).html)<br/>
 <br/>
-**Q: Is the documentation referenced here official?**<br/>
+**Q: Is this official?**<br/>
 **A:** no<br/>

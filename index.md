@@ -2,6 +2,8 @@
 
 Welcome to my personal draft pages
 
+Stuff published here is open for discussion
+
 ### Index
 
 | Link | Description |

@@ -4,5 +4,5 @@
 
 | Link | Description |
 | ------ | ------ |
-| [s13n wiki](https://github.com/jesusjorge/s13n/wiki) | Draft Standardization Wiki |
+| [draft s13n](https://github.com/jesusjorge/s13n/wiki) | Draft Standardization Wiki |
 

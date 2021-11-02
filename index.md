@@ -1,6 +1,6 @@
 # jesusjorge.github.io
 
-Welcome to my personal draft pages
+Welcome to my drafts
 
 Stuff published here is open for discussion
 

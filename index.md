@@ -11,6 +11,12 @@ Posts in here are open for discussion
 | [s13n](https://github.com/jesusjorge/s13n/wiki) | s13n Wiki |
 | [docs](https://github.com/jesusjorge/docs/wiki) | Trivial documentation & manuals |
 
+### Other links
+
+| Link | Description |
+| ---- | ----------- |
+| [cvedetails](https://www.cvedetails.com/) | List of vulnerabilities reported |
+
 <br/>
 
 ### FAQ

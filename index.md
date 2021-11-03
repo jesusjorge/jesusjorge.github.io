@@ -17,10 +17,8 @@ ___
 **Q: What does [s13n](https://www.acronymfinder.com/Standardization-(S13N).html) means?**<br/>
 **A:** see [s13n](https://www.acronymfinder.com/Standardization-(S13N).html)<br/>
 <br/>
-**Q: Is this official?**<br/>
-**A:** no<br/>
-<br/>
-___
+
+
 
 Contact: huh@jesusjorge.com<br/>
 Twitter: [HuhFrum](https://twitter.com/HuhFrum)

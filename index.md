@@ -9,6 +9,7 @@ Posts in here are open for discussion
 | Link | Description |
 | ------ | ------ |
 | [s13n](https://github.com/jesusjorge/s13n/wiki) | s13n Wiki |
+| [docs](https://github.com/jesusjorge/docs/wiki) | Trivial documentation & manuals |
 
 <br/>
 

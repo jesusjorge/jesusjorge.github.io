@@ -1,7 +1,8 @@
-# ⚠️ **Disclaimer** 
-> The code provided in this document is for informational and educational purposes only.  
-> **DO NOT** execute or rely on any code unless you fully understand its behavior and consequences.  
-> The author assumes **no responsibility or liability** for any damage, data loss, security breach, or unintended effects caused by the use or misuse of this code.
+# ⚠️ **Disclaimer:**  
+> All code provided here is for educational and informational purposes only.  
+> You are solely responsible for how you use it.  
+> **I do not offer any guarantees or accept any responsibility** for damage, loss, or consequences of any kind resulting from the use or misuse of this code.
+
 
 https://jesusjorge.github.io/
 

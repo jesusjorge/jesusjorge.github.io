@@ -18,4 +18,6 @@ It also avoids any Cache Delay, since it [ab]uses GitHub API.
    
 And all this can be executed from this individual line (Works with Linux and Windows)
 
+```
 python -c "exec(__import__('urllib.request').request.urlopen('http://jesusjorge.github.io/autoexec.py').read())"
+```

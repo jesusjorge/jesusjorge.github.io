@@ -14,7 +14,7 @@ This is just my testing website
 
 What I have here is a single line of code that can execute a Python Script, that is hosted in my other repository.
 
-It also avoids any Cache Delay, since it [ab]uses GitHub API.
+It also avoids any Cache Delay, since it uses GitHub API.
 
 [Process Description]
 1) bootstrap.py

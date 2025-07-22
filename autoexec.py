@@ -1,8 +1,3 @@
-# Revision: Draft
-# Date:     2025-07-22 10:59
-# Notes:    Uses GitHub API for retreaving file contents.
-#           It can be used on files smaller than 1 Mb
-
 import base64
 import json
 import urllib.request

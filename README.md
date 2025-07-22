@@ -2,8 +2,10 @@ https://jesusjorge.github.io/
 
 This is just my testing website
 
-# DO NOT EXECUTE ANY OF THE CODE IN HERE
-# THIS IS JUST FOR PERSONAL USE
+# ⚠️ WARNING
+# DO NOT EXECUTE ANY OF THE CODE IN HERE.
+# I TAKE NO RESPONSIBILITY FOR ANY DAMAGE IT MAY CAUSE.
+
 
 What I have here is a single line of code that can execute a Python Script, that is hosted in my other repository.
 

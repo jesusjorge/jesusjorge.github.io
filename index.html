@@ -1,20 +1,74 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-  </head>
-  <body>
-    <a href="https://github.com/jesusjorge/jesusjorge.github.io/">github</a><br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <a href="https://jesusjorge.github.io/bootstrap.py">bootstrap.py</a><br/>
-    <br/>
-    <a>Console</a><br/>
-    <pre><code>python -c "exec(__import__('requests').get('https://jesusjorge.github.io/autoexec.py').text)"</code></pre>
-    <a>Python</a><br/>
-    <pre><code>exec(__import__('requests').get('https://jesusjorge.github.io/autoexec.py').text)</code></pre>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Code Snippets</title>
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <!-- Styling -->
+  <style>
+    .code-block {
+      position: relative;
+      margin-bottom: 1em;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 4px 8px;
+      font-size: 12px;
+      background-color: #eee;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    .copy-btn:hover {
+      opacity: 1;
+    }
+
+    pre {
+      padding: 10px;
+      background: #f5f5f5;
+      overflow-x: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://github.com/jesusjorge/jesusjorge.github.io/">github</a><br/><br/><br/><br/><br/>
+
+  <a href="https://jesusjorge.github.io/bootstrap.py">bootstrap.py</a><br/><br/>
+
+  <a>Console</a><br/>
+  <div class="code-block">
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    <pre><code class="language-bash">python -c "exec(__import__('requests').get('https://jesusjorge.github.io/autoexec.py').text)"</code></pre>
+  </div>
+
+  <a>Python</a><br/>
+  <div class="code-block">
+    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+    <pre><code class="language-python">exec(__import__('requests').get('https://jesusjorge.github.io/autoexec.py').text)</code></pre>
+  </div>
+
+  <script>
+    function copyCode(button) {
+      const code = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        button.textContent = "Copied!";
+        setTimeout(() => { button.textContent = "Copy"; }, 1000);
+      });
+    }
+  </script>
+
+</body>
 </html>

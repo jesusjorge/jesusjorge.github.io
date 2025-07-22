@@ -3,7 +3,7 @@ https://jesusjorge.github.io/
 This is just my testing website
 
 
-What I have here is a single line of code than can execute a Python Script, that is hosted in my other repository.
+What I have here is a single line of code that can execute a Python Script, that is hosted in my other repository.
 
 It also avoids any Cache Delay, since it [ab]uses GitHub API.
 

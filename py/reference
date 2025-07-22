@@ -7,9 +7,7 @@ class reference:
         return requests.get(path).text
     @classmethod
     def GetFile(cls,owner,repo,path):
-        response = json.loads(cls.GetHttpText(f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"))
-        download_url = response["download_url"]
-        result = cls.GetHttpText(download_url)
+        result = cls.GetHttpText(f"https://raw.githubusercontent.com/{owner}/{repo}/refs/heads/main/{path}")
         return result
     @classmethod
     def RunScript(cls,contents):

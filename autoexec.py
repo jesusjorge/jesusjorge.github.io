@@ -1,8 +1,7 @@
 import base64
 import json
 import urllib.request
-
-class reference:
+class R1:
     @classmethod
     def GetHttpText(cls,path):
         with urllib.request.urlopen(path) as response:
@@ -12,5 +11,4 @@ class reference:
         response = json.loads(cls.GetHttpText(f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"))
         b64content = response["content"]
         return base64.b64decode(b64content).decode('utf-8')
-
-exec(reference.GithubFile("jesusjorge","pysite","index.py"), globals(), locals())
+exec(R1.GithubFile("jesusjorge","pysite","index.py"), globals(), locals())

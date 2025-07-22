@@ -2,7 +2,7 @@ https://jesusjorge.github.io/
 
 This is just my testing website
 
-# ⚠️ **Disclaimer:** 
+# ⚠️ **Disclaimer** 
 > The code provided in this document is for informational and educational purposes only.  
 > **DO NOT** execute or rely on any code unless you fully understand its behavior and consequences.  
 > The author assumes **no responsibility or liability** for any damage, data loss, security breach, or unintended effects caused by the use or misuse of this code.

@@ -6,11 +6,8 @@ class reference:
     def GetHttpText(cls,path):
         return requests.get(path).text
     @classmethod
-    def GetFile(cls,owner,repo,path):
+    def GithubFile(cls,owner,repo,path):
         result = cls.GetHttpText(f"https://raw.githubusercontent.com/{owner}/{repo}/refs/heads/main/{path}")
         return result
-    @classmethod
-    def RunScript(cls,contents):
-        exec(contents, globals(), locals())
 
-exec(reference.GetFile("jesusjorge","pysite","index.py"), globals(), locals())
+exec(reference.GithubFile("jesusjorge","pysite","index.py"), globals(), locals())

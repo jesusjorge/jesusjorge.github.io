@@ -1,63 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Code Snippets</title>
+  <title>Autoexec Bootstrap</title>
 
   <!-- Highlight.js -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 
-  <!-- Styling -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter&display=swap" rel="stylesheet">
+
   <style>
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
     .code-block {
       position: relative;
-      margin-bottom: 1em;
+      margin: 1.5em 0;
     }
 
     .copy-btn {
       position: absolute;
-      top: 5px;
-      right: 5px;
-      padding: 4px 8px;
-      font-size: 12px;
-      background-color: #eee;
-      border: none;
-      border-radius: 4px;
+      top: 10px;
+      left: 10px;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      background-color: #21262d;
+      color: #c9d1d9;
+      border: 1px solid #30363d;
+      border-radius: 6px;
       cursor: pointer;
-      opacity: 0.7;
+      transition: background 0.2s, transform 0.2s;
+      z-index: 1;
     }
 
     .copy-btn:hover {
-      opacity: 1;
+      background-color: #30363d;
+      transform: scale(1.05);
     }
 
     pre {
-      padding: 10px;
-      background: #f5f5f5;
+      background: #161b22;
+      padding: 1rem 1rem 1rem 4.5rem;
+      border-radius: 8px;
       overflow-x: auto;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.9rem;
+      position: relative;
+    }
+
+    code {
+      color: #c9d1d9;
+    }
+
+    .section-title {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #8b949e;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>🔗 Autoexec Bootstrap</h1>
 
-  <a href="https://github.com/jesusjorge/jesusjorge.github.io/">github</a><br/><br/><br/><br/><br/>
+    <p><a href="https://github.com/jesusjorge/jesusjorge.github.io/">GitHub Repo</a></p>
+    <p><a href="https://jesusjorge.github.io/bootstrap.py">bootstrap.py (view raw)</a></p>
 
-  <a href="https://jesusjorge.github.io/bootstrap.py">bootstrap.py</a><br/><br/>
+    <div class="section-title">▶ Console Command</div>
+    <div class="code-block">
+      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      <pre><code class="language-bash">python -c "exec(__import__('requests').get('https://jesusjorge.github.io/autoexec.py').text)"</code></pre>
+    </div>
 
-  <a>Console</a><br/>
-  <div class="code-block">
-    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-    <pre><code class="language-bash">python -c "exec(__import__('requests').get('https://jesusjorge.github.io/autoexec.py').text)"</code></pre>
-  </div>
-
-  <a>Python</a><br/>
-  <div class="code-block">
-    <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-    <pre><code class="language-python">exec(__import__('requests').get('https://jesusjorge.github.io/autoexec.py').text)</code></pre>
+    <div class="section-title">🐍 Python Inline</div>
+    <div class="code-block">
+      <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      <pre><code class="language-python">exec(__import__('requests').get('https://jesusjorge.github.io/autoexec.py').text)</code></pre>
+    </div>
   </div>
 
   <script>
@@ -65,10 +113,9 @@
       const code = button.nextElementSibling.innerText;
       navigator.clipboard.writeText(code).then(() => {
         button.textContent = "Copied!";
-        setTimeout(() => { button.textContent = "Copy"; }, 1000);
+        setTimeout(() => button.textContent = "Copy", 1200);
       });
     }
   </script>
-
 </body>
 </html>

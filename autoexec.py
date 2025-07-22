@@ -5,12 +5,13 @@
 
 import base64
 import json
-import requests
+import urllib.request
 
 class reference:
     @classmethod
     def GetHttpText(cls,path):
-        return requests.get(path).text
+        with urllib.request.urlopen(path) as response:
+            return response.read().decode()
     @classmethod
     def GithubFile(cls,owner,repo,path):
         result = json.loads(cls.GetHttpText(f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"))

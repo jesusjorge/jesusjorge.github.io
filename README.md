@@ -16,3 +16,6 @@ It also avoids any Cache Delay, since it [ab]uses GitHub API.
 3) https://api.github.com/repos/jesusjorge/pysite/contents/index.py
     This is the script I want to execute. It doesn't have any Cache Delay.
    
+And all this can be executed from this individual line (Works with Linux and Windows)
+
+python -c "exec(__import__('urllib.request').request.urlopen('http://jesusjorge.github.io/autoexec.py').read())"

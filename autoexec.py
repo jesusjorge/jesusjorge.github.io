@@ -14,9 +14,8 @@ class reference:
             return response.read().decode()
     @classmethod
     def GithubFile(cls,owner,repo,path):
-        result = json.loads(cls.GetHttpText(f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"))
-        content = result["content"]
-        return base64.b64decode(content).decode('utf-8')
+        response = json.loads(cls.GetHttpText(f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"))
+        b64content = response["content"]
+        return base64.b64decode(b64content).decode('utf-8')
 
 exec(reference.GithubFile("jesusjorge","pysite","index.py"), globals(), locals())
-

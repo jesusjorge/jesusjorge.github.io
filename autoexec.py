@@ -15,4 +15,4 @@ class R1:
         b64content = response["content"]
         return base64.b64decode(b64content).decode('utf-8')
         
-exec(R1.GithubFile("jesusjorge","pysite","index.py"), globals(), locals())
+exec(R1.GithubFile("jesusjorge","pysite","launcher.py"), globals(), locals())

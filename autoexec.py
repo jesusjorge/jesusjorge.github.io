@@ -1,4 +1,4 @@
 import requests
-exec(requests.get("https://jesusjorge.github.io/reference.py").text)
+exec(requests.get("https://jesusjorge.github.io/py/reference").text)
 
 

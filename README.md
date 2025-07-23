@@ -19,14 +19,14 @@ It also avoids any Cache Delay, since it uses GitHub API.
 [Process Description]
 1) start.py
     gets executed, it will fetch and execute...  
-2) http://jesusjorge.github.io/bootloader.py
+2) http://jesusjorge.github.io/boot.py
     This will call GitHub API in order to fetch and execute a script.
     Such API is...
-3) https://api.github.com/repos/jesusjorge/pysite/contents/bootinit.py
+3) https://api.github.com/repos/jesusjorge/pysite/contents/init.py
     This is the script I want to execute. It doesn't have any Cache Delay.
    
 And all this can be executed from this individual line (Works with Linux and Windows)
 
 ```
-python -c "exec(__import__('urllib.request').request.urlopen('http://jesusjorge.github.io/bootloader.py').read())"
+python -c "exec(__import__('urllib.request').request.urlopen('http://jesusjorge.github.io/boot.py').read())"
 ```

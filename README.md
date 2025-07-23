@@ -30,6 +30,9 @@ It also avoids any Cache Delay, since it uses GitHub API.
     It also provides static methods for retreiving further files, install imports, and execute code
     From there, it will continue with the execution of the desired program.
 ---
+``markdown
+**Process:**
+
 ```mermaid
 graph TD
   Start --> Boot["Boot\nrandom stuff"] --> Init --> User_Program

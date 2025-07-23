@@ -82,6 +82,8 @@ Just to test whether it's possible to achieve that goal: easily updatable softwa
 
 This is just a test, and I don’t recommend using this dangerous method in production (yet). I’m still polishing all the details so I can guarantee there won’t be any issues.
 
+![testing](testing.jpg)
+
 The end goal is to cut down development time when delivering software to clients, specially in cases where requirements change constantly, and multiple versions pile up. The goal is simple: adapt fast, deliver instantly, and eliminate all unnecessary user interaction.
 
 

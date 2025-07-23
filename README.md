@@ -17,7 +17,7 @@ What I have here is a single line of code that can execute a Python Script, that
 It also avoids any Cache Delay, since it uses GitHub API.
 
 [Process Description]
-1) **[START]** [start.py](https://jesusjorge.github.io/start.py) 100 byte(s), or a single line in Python or Console
+1) **[START]** [start.py](https://github.com/jesusjorge/jesusjorge.github.io/blob/master/start.py) 100 byte(s), or a single line in Python or Console
     gets executed, it will fetch and execute...
    
 2) **[BOOT]** https://jesusjorge.github.io/boot.py 760 byte(s)

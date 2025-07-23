@@ -36,9 +36,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
   ```mermaid
   graph TD
     Start --> Boot --> Init --> User_Program
-    BootNote["random stuff"]:::noteStyle
-    Boot --> BootNote
-    style BootNote fill=transparent,stroke=none,color=gray
+
 
 
 

@@ -12,7 +12,7 @@
 
 ---
 # Click & Boom 💣
-## Faster Process, Fewer Steps, Less Friction
+Faster Process, Fewer Steps, Less Friction
 ![Fast](fast.jpg)
 
 ## ~Coding~ Programming ~amid~ Under ~Constant~ Frequent ~Requirement~ Needs ~Changes~ Updates

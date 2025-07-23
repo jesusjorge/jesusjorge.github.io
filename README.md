@@ -17,12 +17,12 @@ What I have here is a single line of code that can execute a Python Script, that
 It also avoids any Cache Delay, since it uses GitHub API.
 
 [Process Description]
-1) *START* start.py
+1) **START** start.py
     gets executed, it will fetch and execute...  
-2) http://jesusjorge.github.io/boot.py
+2) **BOOT** http://jesusjorge.github.io/boot.py
     This will call GitHub API in order to fetch and execute a script.
     Such API is...
-3) https://api.github.com/repos/jesusjorge/pysite/contents/init.py
+3) **INIT** https://api.github.com/repos/jesusjorge/pysite/contents/init.py
     This is the script I want to execute. It doesn't have any Cache Delay.
    
 And all this can be executed from this individual line (Works with Linux and Windows)

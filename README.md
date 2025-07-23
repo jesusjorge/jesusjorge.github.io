@@ -11,7 +11,8 @@
 
 
 ---
-# Faster Process, Fewer Steps, Less Friction
+# Click & Run
+## Faster Process, Fewer Steps, Less Friction
 ![Fast](fast.jpg)
 
 ## ~Coding~ Programming ~amid~ Under ~Constant~ Frequent ~Requirement~ Needs ~Changes~ Updates

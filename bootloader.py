@@ -12,7 +12,7 @@ try:
   exec(tDecoded)
 except urllib.error.HTTPError as e:
   if e.code == 403:
-    print("Retreiving from https://raw.githubusercontent.com/")
+    print("Retrieving from https://raw.githubusercontent.com/")
     tRequest = urllib.request.urlopen(f"https://raw.githubusercontent.com/jesusjorge/pysite/main/bootinit.py")
     tResponse = tRequest.read()
     exec(tResponse)

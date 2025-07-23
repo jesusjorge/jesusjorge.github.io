@@ -32,7 +32,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
 ---
 
 
-- Use `graph TD` for a top-down layout
+
   ```mermaid
   graph LR
     Start --> Boot --> Init --> Program

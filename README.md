@@ -67,7 +67,7 @@ It also tries to avoid cache delays by using the GitHub API. This API has a [rat
     Start --> Boot --> Init --> User_Program
 
 ---
-
+userfriendly.png
 And all this can be executed from this individual line (Works with Linux and Windows)
 
 ```
@@ -86,7 +86,7 @@ This is just a test, and I don’t recommend using this dangerous method in prod
 
 The end goal is to cut down development time when delivering software to clients, specially in cases where requirements change constantly, and multiple versions pile up. The goal is simple: adapt fast, deliver instantly, and eliminate all unnecessary user interaction.
 
-![userfriendly](userfriendly.jpg)
+![user friendly](userfriendly.png)
 
 
 

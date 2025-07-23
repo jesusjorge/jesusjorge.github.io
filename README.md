@@ -71,7 +71,7 @@ And all this could (please don't) be executed from this individual line (Works w
 ```
 python -c "exec(__import__('urllib.request').request.urlopen('http://jesusjorge.github.io/boot.py').read())"
 ```
-And this is what it [looks like](https://github.com/jesusjorge/jesusjorge.github.io/blob/master/demo.png) so don't run it.
+And this is what it [looks like](https://github.com/jesusjorge/jesusjorge.github.io/blob/master/demo.png)
 
 ---
 

@@ -29,18 +29,14 @@ It also avoids any Cache Delay, since it uses GitHub API.
     This is the script I want to execute. It doesn't have any Cache Delay (sometimes)
     It also provides static methods for retreiving further files, install imports, and execute code
     From there, it will continue with the execution of the desired program.
----
----
 
 - Process
   ```mermaid
   graph TD
     Start --> Boot --> Init --> User_Program
 
+---
 
-
-
-   
 And all this can be executed from this individual line (Works with Linux and Windows)
 
 ```

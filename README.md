@@ -13,9 +13,9 @@ https://jesusjorge.github.io/
 This is just my testing website
 
 ---
-Perhaps some of you know how complicated it is to deliver software to an end user, with all its dependencies, files, and everything. Especially in the case of Python, which requires some extra steps. Now imagine that you also need to update such software—you'd have to start the process again: reinstalls, extra steps, more friction.
+Perhaps some of you know how complicated it is to deliver software to an end user, with all its dependencies, files, and everything. Especially in the case of Python, which requires some extra steps. Now imagine that you also need to update such software, you'd have to start the process again: reinstalls, extra steps, more friction.
 
-Wouldn't it be nice if we could just send one link, and by clicking it, the software would instantly install, configure, and run? Just Click and Run. And updates? They wouldn't require any user intervention. It would always run the latest version—just like a website that updates without the user needing to reinstall or configure anything. Truly hands-free software.
+Wouldn't it be nice if we could just send one link, and by clicking it, the software would instantly install, configure, and run? Just Click and Run. And updates? They wouldn't require any user intervention. It would always run the latest version, just like a website that updates without the user needing to reinstall or configure anything. Truly hands free software.
 
 That would simplify the whole:
 

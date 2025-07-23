@@ -60,3 +60,11 @@ And all this can be executed from this individual line (Works with Linux and Win
 ```
 python -c "exec(__import__('urllib.request').request.urlopen('http://jesusjorge.github.io/boot.py').read())"
 ```
+
+---
+
+So, the reason why I'm doing this, is in order to "test" if I could actually achieve such goal, of easy to modify software, without having to worry about any packaging, delivering, reinstall, user interaction, and so on. I also want to be 100% sure that the user isn't running an old version of my software.
+
+This is just a test, and I don't recomend you to implement such *dangerous* method as the one I'm using it. I'm still polishing all the details so I can guarantee that there won't be any issues.
+
+The end goal is to cut as much time as possible from the process of building software for clients. Specially for the cases in which requirements change constantly, and we get a vast amount of different versions of such software. So, adapt to constant change, deliver as fast as possible, and hands free interaction from the user.

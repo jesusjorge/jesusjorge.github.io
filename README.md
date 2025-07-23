@@ -63,8 +63,14 @@ python -c "exec(__import__('urllib.request').request.urlopen('http://jesusjorge.
 
 ---
 
-So, the reason why I'm doing this, is in order to "test" if I could actually achieve such goal, of easy to modify software, without having to worry about any packaging, delivering, reinstall, user interaction, and so on. I also want to be 100% sure that the user isn't running an old version of my software.
+So why am I doing this?
 
-This is just a test, and I don't recomend you to implement such *dangerous* method as the one I'm using it. I'm still polishing all the details so I can guarantee that there won't be any issues.
+Just to test whether it's possible to achieve that goal: easily updatable software, no packaging headaches, no delivery steps, no reinstalling, and no user configuration. I also want to make sure the user is always running the latest version of the code.
 
-The end goal is to cut as much time as possible from the process of building software for clients. Specially for the cases in which requirements change constantly, and we get a vast amount of different versions of such software. So, adapt to constant change, deliver as fast as possible, and hands free interaction from the user.
+This is just a test, and I don’t recommend using this dangerous method in production (yet). I’m still polishing all the details so I can guarantee there won’t be any issues.
+
+The end goal is to cut down development time when delivering software to clients, specially in cases where requirements change constantly, and multiple versions pile up. The goal is simple: adapt fast, deliver instantly, and eliminate all unnecessary user interaction.
+
+
+
+

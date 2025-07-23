@@ -32,7 +32,8 @@ It also avoids any Cache Delay, since it uses GitHub API.
 ---
 ```mermaid
 graph TD
-  Start --> Boot["Boot<br><font size='1'>random stuff</font>"] --> Init --> User_Program
+  Start --> Boot["Boot\nrandom stuff"] --> Init --> User_Program
+
 
 
 

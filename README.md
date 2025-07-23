@@ -31,7 +31,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
     From there, it will continue with the execution of the desired program.
 ---
 
-### 🧠 Notes:
+
 - Use `graph TD` for a top-down layout
   ```mermaid
   graph LR

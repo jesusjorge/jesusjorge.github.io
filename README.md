@@ -25,7 +25,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
     If it fails, it will fallback to raw GitHub CDN
     Such API is...
    
-3) **[INIT]** https://api.github.com/repos/jesusjorge/pysite/contents/init.py
+3) **[INIT]** https://api.github.com/repos/jesusjorge/pysite/contents/init.py larger than 1 kilobyte(s)
     This is the script I want to execute. It doesn't have any Cache Delay (sometimes)
     It also provides static methods for retreiving further files, install imports, and execute code
     From there, it will continue with the execution of the desired program.

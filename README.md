@@ -89,4 +89,7 @@ The end goal is to cut down development time when delivering software to clients
 
 https://jesusjorge.github.io/
 
+Well, if all this sounds good, what could possibly go wrong?
+You can read about that here https://github.com/jesusjorge/pysite
+
 

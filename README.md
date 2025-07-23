@@ -31,6 +31,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
     From there, it will continue with the execution of the desired program.
 
 ---
+
   ```mermaid
   graph LR
     Start --> Boot --> Init --> Program

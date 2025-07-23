@@ -10,12 +10,12 @@ try:
   tContent = tJson["content"]
   tDecoded = base64.b64decode(tContent)
   print("Retrieving from https://api.github.com/")
-  exec(tDecoded)
+  exec(compile(tDecoded, "https://github.com/jesusjorge/pysite/blob/main/init.py", 'exec'))
 except urllib.error.HTTPError as e:
   if e.code == 403: ##### GitHub API rate limit exceeded. Don't panic, use the contents from CDN #####
     tRequest = urllib.request.urlopen(f"https://raw.githubusercontent.com/jesusjorge/pysite/main/init.py")
     tResponse = tRequest.read()
     print("Retrieving from https://raw.githubusercontent.com/")
-    exec(tResponse)
+    exec(compile(tResponse, "https://github.com/jesusjorge/pysite/blob/main/init.py", 'exec'))
   else:
       raise

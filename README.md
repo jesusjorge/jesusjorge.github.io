@@ -17,7 +17,7 @@ What I have here is a single line of code that can execute a Python Script, that
 It also avoids any Cache Delay, since it uses GitHub API.
 
 [Process Description]
-1) start.py
+1) *START* start.py
     gets executed, it will fetch and execute...  
 2) http://jesusjorge.github.io/boot.py
     This will call GitHub API in order to fetch and execute a script.

@@ -28,6 +28,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
 3) **[INIT]** https://api.github.com/repos/jesusjorge/pysite/contents/init.py
     This is the script I want to execute. It doesn't have any Cache Delay (sometimes)
     It also provides static methods for retreiving further files, install imports, and execute code
+    From there, it will continue with the execution of the desired program.
    
 And all this can be executed from this individual line (Works with Linux and Windows)
 

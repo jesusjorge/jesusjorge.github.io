@@ -4,7 +4,7 @@ import urllib.request
 import urllib.error
 
 try:
-  tRequest = urllib.request.urlopen(f"https://api.github.com/repos/jesusjorge/pysite/contents/bootinit.py")
+  tRequest = urllib.request.urlopen(f"https://api.github.com/repos/jesusjorge/pysite/contents/init.py")
   tResponse = tRequest.read()
   tJson = json.loads(tResponse)
   tContent = tJson["content"]
@@ -13,7 +13,7 @@ try:
   exec(tDecoded)
 except urllib.error.HTTPError as e:
   if e.code == 403: #GitHub API rate limit exceeded. Don't panic, just use CDN.
-    tRequest = urllib.request.urlopen(f"https://raw.githubusercontent.com/jesusjorge/pysite/main/bootinit.py")
+    tRequest = urllib.request.urlopen(f"https://raw.githubusercontent.com/jesusjorge/pysite/main/init.py")
     tResponse = tRequest.read()
     print("Retrieving from https://raw.githubusercontent.com/")
     exec(tResponse)

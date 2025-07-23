@@ -12,7 +12,7 @@ try:
 except urllib.error.HTTPError as e:
   if e.code == 403:
     print("GitHub API limit reached. Falling back to raw content.")
-    tRequest = urllib.request.urlopen(f"https://raw.githubusercontent.com/jesusjorge/pysite/refs/heads/main/bootinit.py")
+    tRequest = urllib.request.urlopen(f"https://raw.githubusercontent.com/jesusjorge/pysite/main/bootinit.py")
     tResponse = tRequest.read()
     exec(tResponse)
   else:

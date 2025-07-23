@@ -13,7 +13,7 @@ https://jesusjorge.github.io/
 This is just my testing website
 
 ---
-# Fast process, less steps, less friction
+# Faster Process, Fewer Steps, Less Friction
 ![Fast](fast.jpg)
 
 Perhaps some of you know how complicated it is to deliver software to an end user, with all its dependencies, files, and everything. Especially in the case of Python, which requires some extra steps. Now imagine that you also need to update such software, you'd have to start the process again: reinstalls, extra steps, more friction.

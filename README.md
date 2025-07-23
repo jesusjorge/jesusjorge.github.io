@@ -29,13 +29,14 @@ It also avoids any Cache Delay, since it uses GitHub API.
     This is the script I want to execute. It doesn't have any Cache Delay (sometimes)
     It also provides static methods for retreiving further files, install imports, and execute code
     From there, it will continue with the execution of the desired program.
-
-----
+---
 
 ### 🧠 Notes:
+- Use `graph TD` for a top-down layout
   ```mermaid
   graph LR
     Start --> Boot --> Init --> Program
+
 
 
    

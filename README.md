@@ -14,7 +14,7 @@ This is just my testing website
 
 What I have here is a single line of code that can execute a Python Script, that is hosted in my other repository.
 
-It also avoids any Cache Delay, since it uses GitHub API.
+It also tries to avoids Cache Delay, since it uses GitHub API. Such API has a [rate limit](https://api.github.com/rate_limit). It will fall back automatically to Raw GitHub CDN when it reaches it.
 
 [Process Description]
 1) **[START]** [start.py](https://github.com/jesusjorge/jesusjorge.github.io/blob/master/start.py) 100 byte(s), or a single line in Python or Console

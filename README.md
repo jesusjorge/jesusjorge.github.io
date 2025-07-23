@@ -15,7 +15,12 @@ This is just my testing website
 ---
 
 What I have here is a single line of code that will result in a cascade of events that will lead to:
-- Automatic pip installs where required
+- Automatic pip installs when required
+- Faster Access to files in GitHub repositories
+- Execute a large Python program hosted in GitHub
+- And all of that without any user installation, configuration, or intervention
+
+You could just get into a fresh Windows/Linux machine, with Python installed, and it will run the Python Script with all its dependencies, in the least amount of user effort.
 
 It also tries to avoids Cache Delay, since it uses GitHub API. Such API has a [rate limit](https://api.github.com/rate_limit). It will fall back automatically to Raw GitHub CDN when it reaches it.
 

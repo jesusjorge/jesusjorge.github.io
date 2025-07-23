@@ -32,7 +32,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
 ---
 
 
-- 
+- Process
   ```mermaid
   graph LR
     Start --> Boot --> Init --> Program

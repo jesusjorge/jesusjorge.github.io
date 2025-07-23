@@ -11,7 +11,7 @@
 
 
 ---
-# Click & Run
+# Click & Boom 💣
 ## Faster Process, Fewer Steps, Less Friction
 ![Fast](fast.jpg)
 

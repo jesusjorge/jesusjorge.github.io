@@ -8,9 +8,7 @@
 
 
 
-https://jesusjorge.github.io/
 
-This is just my testing website
 
 ---
 # Faster Process, Fewer Steps, Less Friction
@@ -87,5 +85,6 @@ The end goal is to cut down development time when delivering software to clients
 
 ![user friendly](userfriendly.png)
 
+https://jesusjorge.github.io/
 
 

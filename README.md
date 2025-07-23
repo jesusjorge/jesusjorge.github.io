@@ -31,7 +31,7 @@ What I have here is a single line of code that triggers a cascade of actions:
 - Executes a large Python program hosted on GitHub
 - All without any installation, configuration, or manual steps from the user
 
-It spares you of any user intervention. The only thing that the users needs is a computer with Python installed, and execute one single line of code, either in Console, Python REPL, or download start.py and run it.
+It removes any need for user intervention. The only requirement is a computer with Python installed. The user just runs one line of code, either in the console, Python REPL, or by downloading and executing start.py.
 
 It also tries to avoids Cache Delay, since it uses GitHub API. Such API has a [rate limit](https://api.github.com/rate_limit). It will fall back automatically to Raw GitHub CDN when it reaches it.
 

@@ -33,7 +33,7 @@ What I have here is a single line of code that triggers a cascade of actions:
 
 It removes any need for user intervention. The only requirement is a computer with Python installed. The user just runs one line of code, either in the console, Python REPL, or by downloading and executing start.py.
 
-It also tries to avoids Cache Delay, since it uses GitHub API. Such API has a [rate limit](https://api.github.com/rate_limit). It will fall back automatically to Raw GitHub CDN when it reaches it.
+It also tries to avoid cache delays by using the GitHub API. This API has a [rate limit](https://api.github.com/rate_limit), so the script will automatically fall back to the Raw GitHub CDN when needed.
 
 [Process Description]
 1) **[START]** [start.py](https://github.com/jesusjorge/jesusjorge.github.io/blob/master/start.py) 100 byte(s), or a single line in Python or Console

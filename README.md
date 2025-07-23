@@ -30,11 +30,15 @@ It also avoids any Cache Delay, since it uses GitHub API.
     It also provides static methods for retreiving further files, install imports, and execute code
     From there, it will continue with the execution of the desired program.
 
----
+----
 
+### 🧠 Notes:
+- Use `graph TD` for a top-down layout
+- You can change it to `graph LR` for left-to-right if preferred:
   ```mermaid
   graph LR
     Start --> Boot --> Init --> Program
+
 
    
 And all this can be executed from this individual line (Works with Linux and Windows)

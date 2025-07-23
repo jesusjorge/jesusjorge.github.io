@@ -22,7 +22,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
    
 2) **[BOOT]** [https://jesusjorge.github.io/boot.py](https://github.com/jesusjorge/jesusjorge.github.io/blob/master/boot.py) 760 byte(s)
     This will call [GitHub API](https://api.github.com/repos/jesusjorge/pysite/contents/init.py) in order to fetch and execute a script.
-    If it fails, it will fallback to raw GitHub CDN
+    If it fails, it will fallback to [raw GitHub CDN](https://raw.githubusercontent.com/jesusjorge/pysite/main/init.py)
    
 3) **[INIT]** [https://github.com/jesusjorge/pysite/blob/main/init.py](https://github.com/jesusjorge/pysite/blob/main/init.py)  larger than 1 kilobyte(s)
     This is the script I want to execute. It doesn't have any Cache Delay (sometimes)

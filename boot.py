@@ -12,7 +12,7 @@ try:
   print("Retrieving from https://api.github.com/")
   exec(tDecoded)
 except urllib.error.HTTPError as e:
-  if e.code == 403: #GitHub API rate limit exceeded. Don't panic, just use CDN.
+  if e.code == 403: ##### GitHub API rate limit exceeded. Don't panic, use the contents from CDN #####
     tRequest = urllib.request.urlopen(f"https://raw.githubusercontent.com/jesusjorge/pysite/main/init.py")
     tResponse = tRequest.read()
     print("Retrieving from https://raw.githubusercontent.com/")

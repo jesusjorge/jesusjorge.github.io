@@ -33,8 +33,6 @@ It also avoids any Cache Delay, since it uses GitHub API.
 ----
 
 ### 🧠 Notes:
-- Use `graph TD` for a top-down layout
-- You can change it to `graph LR` for left-to-right if preferred:
   ```mermaid
   graph LR
     Start --> Boot --> Init --> Program

@@ -26,10 +26,10 @@ into this:
 >    [Developer writes software] → [User uses the software] → [User requests changes] → back to step 1
 
 What I have here is a single line of code that triggers a cascade of actions:
-    - Automatically installs pip dependencies (if needed)
-    - Speeds up file access from GitHub repositories
-    - Executes a large Python program hosted on GitHub
-    - All without any installation, configuration, or manual steps from the user
+- Automatically installs pip dependencies (if needed)
+- Speeds up file access from GitHub repositories
+- Executes a large Python program hosted on GitHub
+- All without any installation, configuration, or manual steps from the user
 
 It spares you of any user intervention. The only thing that the users needs is a computer with Python installed, and execute one single line of code, either in Console, Python REPL, or download start.py and run it.
 

@@ -16,7 +16,7 @@ This is just my testing website
 # Faster Process, Fewer Steps, Less Friction
 ![Fast](fast.jpg)
 
-## Coding amid Constant Requirement Changes
+## Coding amid ~Constant~Frequent Requirement Changes
 ### Is that even possible?
 
 

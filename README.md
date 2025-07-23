@@ -70,6 +70,7 @@ And all this can be executed from this individual line (Works with Linux and Win
 ```
 python -c "exec(__import__('urllib.request').request.urlopen('http://jesusjorge.github.io/boot.py').read())"
 ```
+And this is what it [looks like](https://github.com/jesusjorge/jesusjorge.github.io/blob/master/demo.png)
 
 ---
 

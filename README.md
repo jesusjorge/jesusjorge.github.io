@@ -13,6 +13,7 @@ https://jesusjorge.github.io/
 This is just my testing website
 
 ---
+Perhaps some of you may know how complicated it is to deliver Software to a end user, with all its dependencies, files, and everyhing. Imagine if we could just send him one link, and just by clicking it, it will instantly install, configure, and run such software. Just **Click and Run**
 
 What I have here is a single line of code that will result in a cascade of events that will lead to:
 - Automatic pip installs when required

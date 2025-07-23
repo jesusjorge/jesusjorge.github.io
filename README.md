@@ -13,7 +13,13 @@ https://jesusjorge.github.io/
 This is just my testing website
 
 ---
-Perhaps some of you may know how complicated it is to deliver Software to a end user, with all its dependencies, files, and everyhing. Imagine if we could just send him one link, and just by clicking it, it will instantly install, configure, and run such software. Just **Click and Run**
+Perhaps some of you may know how complicated it is to deliver Software to a end user, with all its dependencies, files, and everyhing. Specially in the case of Python, which requires some extra steps. Now imagine that you also need to update such software, so you will have to start the process again, doing reinstalls, and extra steps. 
+
+Wouldn't it be nice if we could just send him one link, and just by clicking it, it will instantly install, configure, and run such software. Just **Click and Run**. And any updates don't require any user intervention. It will always run the latest update. Just in the same way as we could update a Website, and don't require the user to "reinstall" or setup anything. Just hands free software.
+
+That would simplify most of the [Package Software] -> [Deliver to User] -> [User (re)install software] - > [User uses the software] -> [User requires changes] -> [Developer rewrites software] -> back to step 1, Package Software
+
+It will turn that into this: [Developer writes software] -> [User uses the software] -> [User requires changes] -> back to step 1
 
 What I have here is a single line of code that will result in a cascade of events that will lead to:
 - Automatic pip installs when required

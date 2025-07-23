@@ -66,12 +66,12 @@ It also tries to avoid cache delays by using the GitHub API. This API has a [rat
     Start --> Boot --> Init --> User_Program
 
 ---
-And all this can be executed from this individual line (Works with Linux and Windows)
+And all this could (please don't) be executed from this individual line (Works with Linux and Windows)
 
 ```
 python -c "exec(__import__('urllib.request').request.urlopen('http://jesusjorge.github.io/boot.py').read())"
 ```
-And this is what it [looks like](https://github.com/jesusjorge/jesusjorge.github.io/blob/master/demo.png)
+And this is what it [looks like](https://github.com/jesusjorge/jesusjorge.github.io/blob/master/demo.png) so don't run it.
 
 ---
 

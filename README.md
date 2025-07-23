@@ -18,12 +18,16 @@ It also avoids any Cache Delay, since it uses GitHub API.
 
 [Process Description]
 1) **[START]** start.py or a single line in Python or Console
-    gets executed, it will fetch and execute...  
+    gets executed, it will fetch and execute...
+   
 2) **[BOOT]** http://jesusjorge.github.io/boot.py
     This will call GitHub API in order to fetch and execute a script.
+    If it fails, it will fallback to raw GitHub CDN
     Such API is...
+   
 3) **[INIT]** https://api.github.com/repos/jesusjorge/pysite/contents/init.py
-    This is the script I want to execute. It doesn't have any Cache Delay.
+    This is the script I want to execute. It doesn't have any Cache Delay (sometimes)
+    It also provides static methods for retreiving further files, install imports, and execute code
    
 And all this can be executed from this individual line (Works with Linux and Windows)
 

@@ -26,6 +26,8 @@ Perhaps some of you know how complicated it is to deliver software to an end use
 
 Wouldn't it be nice if we could just send one link, and by clicking it, the software would instantly install, configure, and run? Just Click and Run. And updates? They wouldn't require any user intervention. It would always run the latest version, just like a website that updates without the user needing to reinstall or configure anything. Truly hands free software.
 
+![Simple](simple.jpg)
+
 That would simplify the whole:
 
 >    [Package Software] → [Deliver to User] → [User (re)installs Software] → [User uses the software] → [User requests changes] → [Developer rewrites software] → back to step 1

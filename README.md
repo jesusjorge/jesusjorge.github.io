@@ -33,7 +33,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
 - Process
   ```mermaid
   graph TD
-    Start --> [Boot](https://example.com) --> Init --> User_Program
+    Start --> Boot --> Init --> User_Program
 
 ---
 

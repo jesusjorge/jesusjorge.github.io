@@ -20,7 +20,7 @@ It also avoids any Cache Delay, since it uses GitHub API.
 1) **[START]** start.py or a single line in Python or Console
     gets executed, it will fetch and execute...
    
-2) **[BOOT]** http://jesusjorge.github.io/boot.py
+2) **[BOOT]** http://jesusjorge.github.io/boot.py 760 byte(s)
     This will call GitHub API in order to fetch and execute a script.
     If it fails, it will fallback to raw GitHub CDN
     Such API is...

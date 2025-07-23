@@ -1,6 +1,7 @@
 import base64
 import json
 import urllib.request
+import urllib.error
 
 try:
   tRequest = urllib.request.urlopen(f"https://api.github.com/repos/jesusjorge/pysite/contents/bootinit.py")

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicar Tablas de Multiplicar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Ecuación en texto grande */
+        #ecuacion {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: #2c3e50;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+
+        input[type="number"] {
+            font-size: 2rem;
+            padding: 0.5rem;
+            width: 120px;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Contenedor del historial */
+        #historial-container {
+            margin-top: 1rem;
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        #historial {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #historial li {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            animation: aparecer 0.3s ease-in-out;
+        }
+
+        .correcto {
+            border-left: 5px solid #2ecc71;
+        }
+
+        .incorrecto {
+            border-left: 5px solid #e74c3c;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #mensaje-final {
+            font-size: 2.5rem;
+            color: #2ecc71;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="juego-container">
+        <h2>¿Cuánto es?</h2>
+        <div id="ecuacion"></div>
+        <div class="input-group">
+            <input type="number" id="respuesta" autocomplete="off" autofocus>
+            <button onclick="verificarRespuesta()">Responder</button>
+        </div>
+    </div>
+
+    <div id="mensaje-final">
+        🎉 ¡Felicidades! Hiciste todo bien. 🎉
+    </div>
+
+    <div id="historial-container">
+        <ul id="historial"></ul>
+    </div>
+
+    <script>
+        let pendientes = [];
+        let indexActual = -1;
+        let xActual = 0;
+        let yActual = 0;
+
+        // Generar las tablas del 2x2 al 9x9
+        for (let x = 2; x < 10; x++) {
+            for (let y = 2; y < 10; y++) {
+                pendientes.push([x, y]);
+            }
+        }
+
+        // Función para revolver (equivalente a tu función en Python)
+        function revolver(arreglo) {
+            for (let i = arreglo.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arreglo[i], arreglo[j]] = [arreglo[j], arreglo[i]];
+            }
+        }
+
+        revolver(pendientes);
+
+        // Mostrar la siguiente pregunta
+        function siguientePregunta() {
+            if (pendientes.length === 0) {
+                document.getElementById('juego-container').style.display = 'none';
+                document.getElementById('mensaje-final').style.display = 'block';
+                return;
+            }
+
+            // Elegir una posición aleatoria de los pendientes restantes
+            indexActual = Math.floor(Math.random() * pendientes.length);
+            [xActual, yActual] = pendientes[indexActual];
+
+            document.getElementById('ecuacion').innerText = `${xActual} × ${yActual}`;
+            
+            const inputRespuesta = document.getElementById('respuesta');
+            inputRespuesta.value = '';
+            inputRespuesta.focus();
+        }
+
+        // Verificar la respuesta ingresada
+        function verificarRespuesta() {
+            const inputRespuesta = document.getElementById('respuesta');
+            const respuestaStr = inputRespuesta.value.trim();
+            
+            if (respuestaStr === "") return; // Ignorar si está vacío
+
+            const respuesta = parseInt(respuestaStr, 10);
+            const resultadoCorrecto = xActual * yActual;
+            
+            const historial = document.getElementById('historial');
+            const nuevoItem = document.createElement('li');
+
+            if (respuesta === resultadoCorrecto) {
+                nuevoItem.className = 'correcto';
+                nuevoItem.innerHTML = `<strong>¡Correcto!</strong> ${xActual} × ${yActual} = ${respuesta}`;
+                pendientes.splice(indexActual, 1); // Quitar de pendientes si es correcto
+            } else {
+                nuevoItem.className = 'incorrecto';
+                nuevoItem.innerHTML = `<strong>¡Incorrecto!</strong> ${xActual} × ${yActual} = ${resultadoCorrecto} <em>(tu respuesta: ${respuesta})</em>`;
+            }
+
+            // Agregar el nuevo elemento al principio (hacia arriba)
+            historial.prepend(nuevoItem);
+
+            siguientePregunta();
+        }
+
+        // Permitir usar la tecla "Enter" para enviar la respuesta
+        document.getElementById('respuesta').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                verificarRespuesta();
+            }
+        });
+
+        // Iniciar el juego
+        siguientePregunta();
+    </script>
+</body>
+</html>

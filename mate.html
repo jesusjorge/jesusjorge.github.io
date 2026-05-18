@@ -12,51 +12,76 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2rem;
+            padding: 2vh 2vw;
             margin: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
         .container {
             text-align: center;
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 95%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Ecuación en texto grande */
+        h2 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #7f8c8d;
+        }
+
         #ecuacion {
-            font-size: 4rem;
+            font-size: 15vw; 
             font-weight: bold;
-            margin: 1rem 0;
+            margin: 2rem 0;
             color: #2c3e50;
+            line-height: 1;
+        }
+
+        @media (min-width: 1000px) {
+            #ecuacion {
+                font-size: 12rem;
+            }
         }
 
         .input-group {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 2rem;
+            gap: 20px;
+            width: 100%;
         }
 
         input[type="number"] {
-            font-size: 2rem;
-            padding: 0.5rem;
-            width: 120px;
+            font-size: 4rem;
+            padding: 1rem;
+            width: 200px;
             text-align: center;
-            border: 2px solid #ccc;
-            border-radius: 5px;
+            border: 4px solid #ccc;
+            border-radius: 10px;
+            -moz-appearance: textfield;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
 
         button {
-            font-size: 1.5rem;
-            padding: 0.5rem 1rem;
+            font-size: 3rem;
+            padding: 1rem 3rem;
             background-color: #3498db;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             transition: background 0.3s;
         }
@@ -65,11 +90,10 @@
             background-color: #2980b9;
         }
 
-        /* Contenedor del historial */
         #historial-container {
-            margin-top: 1rem;
-            width: 100%;
-            max-width: 500px;
+            margin-top: 2rem;
+            width: 95%;
+            max-width: 1200px;
             text-align: left;
         }
 
@@ -80,21 +104,21 @@
         }
 
         #historial li {
-            padding: 10px;
-            margin-bottom: 5px;
-            border-radius: 5px;
-            font-size: 1.2rem;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            font-size: 2rem;
             background: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             animation: aparecer 0.3s ease-in-out;
         }
 
         .correcto {
-            border-left: 5px solid #2ecc71;
+            border-left: 10px solid #2ecc71;
         }
 
         .incorrecto {
-            border-left: 5px solid #e74c3c;
+            border-left: 10px solid #e74c3c;
         }
 
         @keyframes aparecer {
@@ -102,10 +126,52 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        #mensaje-final {
-            font-size: 2.5rem;
-            color: #2ecc71;
+        /* ESTILOS PARA EL FINAL DEL JUEGO */
+        #pantalla-final {
             display: none;
+            width: 95%;
+            max-width: 800px;
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #mensaje-final {
+            font-size: 3rem;
+            color: #2ecc71;
+            margin-bottom: 2rem;
+        }
+
+        #tabla-resultados {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.5rem;
+        }
+
+        #tabla-resultados th, #tabla-resultados td {
+            border: 2px solid #ecf0f1;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #tabla-resultados th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+
+        .celda-verde {
+            background-color: #2ecc71;
+            color: white;
+            font-weight: bold;
+        }
+
+        .celda-roja {
+            background-color: #e74c3c;
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -120,8 +186,12 @@
         </div>
     </div>
 
-    <div id="mensaje-final">
-        🎉 ¡Felicidades! Hiciste todo bien. 🎉
+    <!-- Contenedor que aparecerá al terminar -->
+    <div id="pantalla-final">
+        <div id="mensaje-final">
+            🎉 ¡Felicidades, terminaste! 🎉<br>Aquí están tus estadísticas:
+        </div>
+        <div id="contenedor-tabla"></div>
     </div>
 
     <div id="historial-container">
@@ -130,18 +200,20 @@
 
     <script>
         let pendientes = [];
+        let errores = {}; // Objeto para guardar el número de errores
         let indexActual = -1;
         let xActual = 0;
         let yActual = 0;
 
-        // Generar las tablas del 2x2 al 9x9
+        // Generar las tablas del 2x2 al 9x9 e inicializar el contador de errores
         for (let x = 2; x < 10; x++) {
             for (let y = 2; y < 10; y++) {
                 pendientes.push([x, y]);
+                errores[`${x}-${y}`] = 0; // Inicializar en 0 errores
             }
         }
 
-        // Función para revolver (equivalente a tu función en Python)
+        // Función para revolver
         function revolver(arreglo) {
             for (let i = arreglo.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -151,15 +223,48 @@
 
         revolver(pendientes);
 
+        // Generar y mostrar la tabla de estadísticas
+        function mostrarEstadisticas() {
+            let html = '<table id="tabla-resultados">';
+            
+            // Fila de cabecera (multiplicador superior)
+            html += '<tr><th>×</th>';
+            for (let i = 2; i <= 9; i++) {
+                html += `<th>${i}</th>`;
+            }
+            html += '</tr>';
+            
+            // Filas con los resultados
+            for (let x = 2; x <= 9; x++) {
+                html += `<tr><th>${x}</th>`;
+                for (let y = 2; y <= 9; y++) {
+                    let fallos = errores[`${x}-${y}`];
+                    // Si hay 0 fallos es verde, si hay 1 o más es roja
+                    let clase = fallos === 0 ? 'celda-verde' : 'celda-roja';
+                    html += `<td class="${clase}">${fallos}</td>`;
+                }
+                html += '</tr>';
+            }
+            
+            html += '</table>';
+            
+            document.getElementById('contenedor-tabla').innerHTML = html;
+        }
+
         // Mostrar la siguiente pregunta
         function siguientePregunta() {
             if (pendientes.length === 0) {
+                // Ocultar juego y historial
                 document.getElementById('juego-container').style.display = 'none';
-                document.getElementById('mensaje-final').style.display = 'block';
+                document.getElementById('historial-container').style.display = 'none';
+                
+                // Generar y mostrar resultados
+                mostrarEstadisticas();
+                document.getElementById('pantalla-final').style.display = 'block';
                 return;
             }
 
-            // Elegir una posición aleatoria de los pendientes restantes
+            // Elegir una posición aleatoria
             indexActual = Math.floor(Math.random() * pendientes.length);
             [xActual, yActual] = pendientes[indexActual];
 
@@ -175,7 +280,7 @@
             const inputRespuesta = document.getElementById('respuesta');
             const respuestaStr = inputRespuesta.value.trim();
             
-            if (respuestaStr === "") return; // Ignorar si está vacío
+            if (respuestaStr === "") return; 
 
             const respuesta = parseInt(respuestaStr, 10);
             const resultadoCorrecto = xActual * yActual;
@@ -186,19 +291,20 @@
             if (respuesta === resultadoCorrecto) {
                 nuevoItem.className = 'correcto';
                 nuevoItem.innerHTML = `<strong>¡Correcto!</strong> ${xActual} × ${yActual} = ${respuesta}`;
-                pendientes.splice(indexActual, 1); // Quitar de pendientes si es correcto
+                pendientes.splice(indexActual, 1); // Quitar de pendientes solo si acertó
             } else {
                 nuevoItem.className = 'incorrecto';
                 nuevoItem.innerHTML = `<strong>¡Incorrecto!</strong> ${xActual} × ${yActual} = ${resultadoCorrecto} <em>(tu respuesta: ${respuesta})</em>`;
+                errores[`${xActual}-${yActual}`]++; // Sumar un error a esta combinación específica
             }
 
-            // Agregar el nuevo elemento al principio (hacia arriba)
+            // Agregar al historial hacia arriba
             historial.prepend(nuevoItem);
 
             siguientePregunta();
         }
 
-        // Permitir usar la tecla "Enter" para enviar la respuesta
+        // Permitir usar la tecla "Enter"
         document.getElementById('respuesta').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 verificarRespuesta();
